@@ -7,7 +7,7 @@ import train
 
 
 def main():
-    trained_model, aq_data = train.train()
+    trained_model, aq_data = train.train_regression()
     inputs, ground_truth = SingleLoader(aq_data, epochs=1).__next__()
     predictions = trained_model(inputs, training=False).numpy().flatten()
 
